@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Library</title>
 </head>
 <body>
     <h1 id="titles">Books</h1>
     <div class="cards-container">
-        <div class="card">
-            <h1>FORM</h1>
+
+        <div class="card" id="card-form">
+
+            <div id="nameDiv" class="input">Name: <input id="name" type="text" placeholder="Book Name"></div>
+            <div class="input">Author: <input id="author" type="text" placeholder="Ryan Holliday"></div>
+            <div class="input">Number of Pages: <input id="pages" type="number" placeholder="123"></div>
+            <div class="input">Has been readed?: <input id="pages" type="checkbox"></div>
+
+            <button id="entry">Submit Entry</button>
         </div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </table>
+
     </div>
     
     <button id="test-button">Test Book Prompt</button>
