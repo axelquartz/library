@@ -9,25 +9,34 @@
     <title>Library</title>
 </head>
 <body>
-    <h1 id="titles">Books</h1>
+    <h1 id="title">Books</h1>
     <div class="cards-container">
 
         <div class="card" id="card-form">
+            <div class="inputs-group">
+                <h3>
+                    Add Your Book
+                </h3>
+                <div id="nameDiv" class="input">Name:
+                    <div>
+                        <input id="name" type="text" placeholder="Book Name">
+                    </div>
+                </div>
+                <div class="input">Author:
+                    <div>
+                        <input id="author" type="text" placeholder="Ryan Holliday">
+                    </div>
+                </div>
+                <div class="input">Number of Pages: 
+                    <div>
+                        <input id="pages" type="number" placeholder="123">
+                    </div>
+                </div>
+                <button id="entry">Submit Entry</button>
+            </div>
+            
 
-            <div id="nameDiv" class="input">Name: <input id="name" type="text" placeholder="Book Name"></div>
-            <div class="input">Author: <input id="author" type="text" placeholder="Ryan Holliday"></div>
-            <div class="input">Number of Pages: <input id="pages" type="number" placeholder="123"></div>
-            <div class="input">Has been readed?: <input id="pages" type="checkbox"></div>
-
-            <button id="entry">Submit Entry</button>
         </div>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Grade</th>
-            </tr>
-        </table>
 
     </div>
 </body>

@@ -1,33 +1,84 @@
 :root{
-    background-color: salmon;
+    background-color: rgb(255, 255, 255);
+    font-family: helvetica, sans-serif;
+}
+#title{
+    text-align: center;
+    margin: 50px;
 }
 .cards-container{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-auto-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-rows: repeat(auto-fit, minmax(350px, 400px));
+    grid-auto-rows: repeat(auto-fit, minmax(350px, 400px));
 }
 .card{
-    height: 100px;
-    width: 200px;
-    background-color: white;
-    padding: 150px;
-    margin: 5px;
+    height: 300px;
+    width: 220px;
+    border-radius: 30px;
+    background-color: #f3f3f3;
+    padding: 30px;
+    border: solid 2px #000;
+    text-align: center;
 }
 .card>p{
-    margin: 10px auto;
-    background-color: yellow;
+    margin: 30px auto;
+    font-weight: bold;
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 2px #000;
 }
-
+h3{
+    margin: 0;
+}
 #nameDiv{
     margin: 50px 0 0 0;
 }
+.inputs-group{
+    margin: 0 0 10px 0;
+}
 .input{
-    background-color:aqua
+    margin: auto;
+    font-weight: 700;
+}
+input{
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+
+}
+.remove-button{
+    border: solid 2px #000;
+    padding: 0 8px 2px 8px;
+    border-radius: 30px;
+    margin-left: 190px;
+    /* font-weight: bold; */
+    font-size: 22px;
 }
 #entry{
-    width: 150px;
-    height: 30px
+    width: 90%;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    border: solid 2px #000;
+    background-color: #000;
+    
 }
 .toggle{
-    padding: 50px;
-    background-color: orange;
+    width: 90%;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: solid 2px #000;
+    color: #fff;
+    background-color: #ff4d47;
 }

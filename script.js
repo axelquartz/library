@@ -1,17 +1,19 @@
 let myLibrary = [];
 
-function Book(title, author){
+function Book(title, author, pages){
         this.title = title;
         this.author = author;
+        this.pages = pages;
 }
 
-function displayBooks(title, author){
+function displayBooks(title, author, pages){
     title = document.getElementById('name').value
     author = document.getElementById('author').value;
+    pages = document.getElementById('pages').value
     // let grade = document.getElementById('grade').value;
 
-    myLibrary.push(new Book(title, author));
-    
+    // Push user values to array
+    myLibrary.push(new Book(title, author, pages));
 
     for (let i = myLibrary.length - 1; i != myLibrary.length; i++) {
         //Add a bew card
@@ -19,33 +21,62 @@ function displayBooks(title, author){
         let newCard = document.createElement('div')
         newCard.className = 'card';
         newCard.setAttribute('id', i);
-        cardsContainer.append(newCard)   
+        cardsContainer.append(newCard)  
+
+        // Add remove button
+        newRemoveButton = document.createElement('button')
+        newRemoveButton.className = 'remove-button'
+        newCard.append(newRemoveButton)
+        newRemoveButton.innerText = 'x'
         
-        //Add a inner information
-        newRemoveButton = document.createElement('button')    
-        newP = document.createElement('p')
+        //Add text info of the new added card
+        newBr = document.createElement('br') 
+        p1 = document.createElement('p')
+        p2 = document.createElement('p')
+        p3 = document.createElement('p')
+
+        newCard.append(p1)
+        p1.append(myLibrary[i].title);
+        
+        newCard.append(p2)
+
+        p2.append(myLibrary[i].author)
+
+        newCard.append(p3)
+
+        p3.append(myLibrary[i].pages)
+
+        console.log(i);
+        
+        // Add toggle button
         newToggle = document.createElement('button')
         newToggle.className = 'toggle'
+        newToggle.setAttribute('id', 'toggle' + i);
+
         newCard.append(newToggle)
-        newCard.append(newRemoveButton)
+        
+        // Set toggle button value as 'Not Readed' 
+        let toggleModify = document.getElementById('toggle' + i)
+        toggleModify.value = 'Not Readed'
+        toggleModify.innerText = toggleModify.value;
+        toggleModify.style.backgroundColor = '#ff4d47'
 
-        //Set toggle button value as 'Not Readed' 
-        newToggle.value = 'Not Readed'
-        newToggle.innerText = newToggle.value
-
-        //Toggle button If Else Statement
-        newToggle.addEventListener('click', function toggleButton(){
+        // Toggle button If Else Statement
+        toggleModify.addEventListener('click', function toggleButton(){
            
-            if (newToggle.value == 'Not Readed') {
-            newToggle.value = 'Readed'
-            newToggle.innerText = newToggle.value
+            if (toggleModify.value == 'Not Readed') {
+                toggleModify.value = 'Readed'
+                toggleModify.style.backgroundColor = '#509c1e'
+                toggleModify.innerText = toggleModify.value
             } else {
-                newToggle.value = 'Not Readed'
-                newToggle.innerText = newToggle.value
+                toggleModify.value = 'Not Readed'
+                toggleModify.innerText = toggleModify.value
+                toggleModify.style.backgroundColor = '#ff4d47'
+
             }
         })
 
-        //Remove button functionality
+        // Remove button functionality
         newRemoveButton.addEventListener('click', function test(){
             newCard.classList.remove('card')
             newCard.remove();
@@ -53,17 +84,12 @@ function displayBooks(title, author){
 
 
         })
-        //Add info of the new added card
-        newCard.append(newP)
-        newP.append(myLibrary[i].title);
-        newBr = document.createElement('br')
-        newP.append(newBr)
-        newP.append(myLibrary[i].author)
 
-        console.log(i);
         // console.log(myLibrary[i].title);
         document.getElementById('name').value = '';
         document.getElementById('author').value = '';
+        document.getElementById('pages').value = '';
+
 
         // Add readed status
 
@@ -74,14 +100,3 @@ function displayBooks(title, author){
 
 let entry = document.getElementById('entry');
 entry.addEventListener('click', displayBooks);
-
-// let row = 1;
-
-// function displayDetails(){
-    
-//     let name = document.getElementById('name').value;
-//     let age = document.getElementById('age').value;
-//     let grade = document.getElementById('grade').value;
-
-//     alert(name + age + grade)
-// }
