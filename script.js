@@ -97,6 +97,13 @@ function displayBooks(title, author, pages){
         
     }
 }
-
+// Submit entry button
 let entry = document.getElementById('entry');
 entry.addEventListener('click', displayBooks);
+
+// Submit entry by pressing 'enter'
+document.addEventListener('keypress', function(e){
+    if (e.key === 'Enter') {
+        displayBooks()
+    }
+});
