@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="title">Books</h1>
     <div class="cards-container">
+      <div class="card" id="card-form">
+        <div class="inputs-group">
+          <h3>Add Your Book</h3>
+          <div id="error"></div>
 
-        <div class="card" id="card-form">
-            <div class="inputs-group">
-                <h3>
-                    Add Your Book
-                </h3>
-                <div id="nameDiv" class="input">Name:
-                    <div>
-                        <input id="name" type="text" placeholder="Book Name">
-                    </div>
-                </div>
-                <div class="input">Author:
-                    <div>
-                        <input id="author" type="text" placeholder="Author">
-                    </div>
-                </div>
-                <div class="input">Number of Pages: 
-                    <div>
-                        <input id="pages" type="number" placeholder="123">
-                    </div>
-                </div>
-                <button id="entry">Submit Entry</button>
+          <form id="form">
+            <div id="nameDiv" class="input">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Book Name..." name="name"/>
             </div>
-            
+            <div class="input">
+              <label for="author">Author</label>
+              <input id="author" type="text" placeholder="Author..." name="author"/>
+              </div>
+            <div class="input">
+              <label for="number">Number of Pages</label>
+              <input id="pages" type="number" placeholder="123..." name="number"/>
+            </div>
+              <button type="submit" id="entry">Submit Entry</button>
+          </form>
 
         </div>
-
+      </div>
     </div>
-</body>
+  </body>
 </html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security

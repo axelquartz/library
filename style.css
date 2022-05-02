@@ -1,56 +1,55 @@
-:root{
+:root {
     background-color: rgb(255, 255, 255);
     font-family: helvetica, sans-serif;
-}
-#title{
+  }
+  #title {
     text-align: center;
     margin: 50px;
-}
-.cards-container{
+  }
+  .cards-container {
     display: grid;
     flex-wrap: wrap;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-}
-.card{
+  }
+  .card {
     height: 300px;
     width: 220px;
     border-radius: 30px;
     background-color: #f3f3f3;
     padding: 30px;
     text-align: center;
-}
-.card>p{
+  }
+  .card > p {
     margin: 30px auto;
     font-weight: bold;
     background-color: #f3f3f3;
     padding: 5px;
     border-radius: 10px;
     border: solid 1px #a7a7a7;
-}
-h3{
+  }
+  h3 {
     margin: 0;
-}
-#nameDiv{
+  }
+  #nameDiv {
     margin: 50px 0 0 0;
-}
-.inputs-group{
+  }
+  .inputs-group {
     margin: 0 0 10px 0;
-}
-.input{
+  }
+  .input {
     margin: auto;
     font-weight: 700;
-}
-input{
+  }
+  input {
     margin: auto;
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
     width: 80%;
     border: solid 1px #a7a7a7;
-
-}
-.remove-button{
+  }
+  .remove-button {
     border: none;
     padding: 0 8px 2px 8px;
     color: #fff;
@@ -59,11 +58,11 @@ input{
     /* font-weight: bold; */
     font-size: 22px;
     background-color: #ff4d47;
-}
-.remove-button:active{
+  }
+  .remove-button:active {
     background-color: #db3630;
-}
-#entry{
+  }
+  #entry {
     width: 90%;
     height: 35px;
     margin-top: 20px;
@@ -72,11 +71,11 @@ input{
     color: #fff;
     background-color: #000;
     border: none;
-}
-#entry:active{
+  }
+  #entry:active {
     background-color: #a7a7a7;
-}
-.toggle{
+  }
+  .toggle {
     width: 90%;
     height: 35px;
     margin-top: 20px;
@@ -85,4 +84,4 @@ input{
     color: #fff;
     border: none;
     background-color: #ff4d47;
-}
+  }
