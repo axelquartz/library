@@ -9,25 +9,46 @@ let errorElement = document.getElementById('error')
 
 // Form validation
 form.addEventListener('submit', function(e){
+  
 
   let messages = []
-  if (justTitle.value === '' || justTitle.value == null){
-    messages.push('Name is required')
-  }
-  if (justAuthor.value === '' || justTitle.value == null){
-    messages.push('Name is required')
-  }
-  if (justPages.value.length < 2){
-    messages.push('This is not a book')
-  }
-  if (messages.length > 0){
-    e.preventDefault()
-    errorElement.innerText = messages.join(', ')
-  }else{
-    displayBooks()
-    e.preventDefault()
 
+  if(e.key === 'Enter'){
+    if (justTitle.value === '' || justTitle.value == null){
+      messages.push('Name is required')
+    }
+    if (justAuthor.value === '' || justTitle.value == null){
+      messages.push('Author is required')
+    }
+    if (justPages.value.length < 2){
+      messages.push('This is not a book')
+    }
+    if (messages.length > 0){
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }else{
+      displayBooks()
+      e.preventDefault()
+    }
+  }else{
+    if (justTitle.value === '' || justTitle.value == null){
+      messages.push('Name is required')
+    }
+    if (justAuthor.value === '' || justTitle.value == null){
+      messages.push('Author is required')
+    }
+    if (justPages.value.length < 2){
+      messages.push('This is not a book')
+    }
+    if (messages.length > 0){
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }else{
+      displayBooks()
+      e.preventDefault()
+    }
   }
+  
   
 })
 
