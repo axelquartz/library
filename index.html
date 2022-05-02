@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
     <title>Library</title>
   </head>
   <body>
@@ -14,25 +14,24 @@
       <div class="card" id="card-form">
         <div class="inputs-group">
           <h3>Add Your Book</h3>
-          <div id="nameDiv" class="input">
-            Name:
-            <div>
-              <input id="name" type="text" placeholder="Book Name" />
+          <div id="error"></div>
+
+          <form id="form">
+            <div id="nameDiv" class="input">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Book Name..." name="name"/>
             </div>
-          </div>
-          <div class="input">
-            Author:
-            <div>
-              <input id="author" type="text" placeholder="Author" />
+            <div class="input">
+              <label for="author">Author</label>
+              <input id="author" type="text" placeholder="Author..." name="author"/>
+              </div>
+            <div class="input">
+              <label for="number">Number of Pages</label>
+              <input id="pages" type="number" placeholder="123..." name="number"/>
             </div>
-          </div>
-          <div class="input">
-            Number of Pages:
-            <div>
-              <input id="pages" type="number" placeholder="123" />
-            </div>
-          </div>
-          <button id="entry">Submit Entry</button>
+              <button type="submit" id="entry">Submit Entry</button>
+          </form>
+
         </div>
       </div>
     </div>
