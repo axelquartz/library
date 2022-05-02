@@ -1,5 +1,36 @@
 let myLibrary = [];
 
+// Event listeners without the value
+let justTitle = document.getElementById('name')
+let justAuthor = document.getElementById('author');
+let justPages = document.getElementById('pages')
+let form = document.getElementById('form')
+let errorElement = document.getElementById('error')
+
+// Form validation
+form.addEventListener('submit', function(e){
+
+  let messages = []
+  if (justTitle.value === '' || justTitle.value == null){
+    messages.push('Name is required')
+  }
+  if (justAuthor.value === '' || justTitle.value == null){
+    messages.push('Name is required')
+  }
+  if (justPages.value.length < 2){
+    messages.push('This is not a book')
+  }
+  if (messages.length > 0){
+    e.preventDefault()
+    errorElement.innerText = messages.join(', ')
+  }else{
+    displayBooks()
+    e.preventDefault()
+
+  }
+  
+})
+
 function Book(title, author, pages){
         this.title = title;
         this.author = author;
@@ -91,19 +122,11 @@ function displayBooks(title, author, pages){
         document.getElementById('pages').value = '';
 
 
-        // Add readed status
+
 
         
         
     }
+
+
 }
-// Submit entry button
-let entry = document.getElementById('entry');
-entry.addEventListener('click', displayBooks);
-
-// Submit entry by pressing 'enter'
-document.addEventListener('keypress', function(e){
-    if (e.key === 'Enter') {
-        displayBooks()
-    }
-});
